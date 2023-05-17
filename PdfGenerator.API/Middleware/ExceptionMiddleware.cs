@@ -1,0 +1,44 @@
+﻿using System.Net;
+using Newtonsoft.Json;
+
+namespace PdfGenerator.API.Middleware;
+
+public sealed class ExceptionMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly ILogger<ExceptionMiddleware> _logger;
+
+    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
+    {
+        _logger = logger;
+        _next = next;
+    }
+
+    public async Task InvokeAsync(HttpContext httpContext)
+    {
+        try
+        {
+            await _next(httpContext);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error was caught by GLOBAL exception middleware: {msg}", ex.Message);
+            await HandleExceptionAsync(httpContext);
+        }
+    }
+
+    /// <summary>
+    /// Overrides response body with generic response when server error occurs 
+    /// </summary>
+    /// <param name="context"></param>
+    private async Task HandleExceptionAsync(HttpContext context)
+    {
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+        var resp = new
+        {
+            Message = "Server experienced unexpected Error. Please try again later."
+        };
+        await context.Response.WriteAsync(JsonConvert.SerializeObject(resp));
+    }
+}

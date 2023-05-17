@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfGenerator.API", "PdfGenerator.API\PdfGenerator.API.csproj", "{96D62BA7-4DAC-4011-9F96-099BBF5DDA2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfGenerator", "PdfGenerator\PdfGenerator.csproj", "{2AAD3ACC-BEF3-42B1-8A8B-56EADE281B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainObjects", "DomainObjects\DomainObjects.csproj", "{485D6AC1-FC70-4064-A513-55ABEC116F95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96D62BA7-4DAC-4011-9F96-099BBF5DDA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D62BA7-4DAC-4011-9F96-099BBF5DDA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D62BA7-4DAC-4011-9F96-099BBF5DDA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D62BA7-4DAC-4011-9F96-099BBF5DDA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAD3ACC-BEF3-42B1-8A8B-56EADE281B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAD3ACC-BEF3-42B1-8A8B-56EADE281B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAD3ACC-BEF3-42B1-8A8B-56EADE281B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAD3ACC-BEF3-42B1-8A8B-56EADE281B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
