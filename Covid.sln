@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfGenerator", "PdfGenerato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainObjects", "DomainObjects\DomainObjects.csproj", "{485D6AC1-FC70-4064-A513-55ABEC116F95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation", "Automation\Automation.csproj", "{284D7AF8-168F-4C0E-AAEB-FC73E1630904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{485D6AC1-FC70-4064-A513-55ABEC116F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284D7AF8-168F-4C0E-AAEB-FC73E1630904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284D7AF8-168F-4C0E-AAEB-FC73E1630904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284D7AF8-168F-4C0E-AAEB-FC73E1630904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284D7AF8-168F-4C0E-AAEB-FC73E1630904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
