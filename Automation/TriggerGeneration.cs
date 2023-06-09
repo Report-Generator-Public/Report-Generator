@@ -45,7 +45,7 @@ public class TriggerGeneration
     }
 
     [Function(nameof(TriggerGeneration))]
-    public async Task RunAsync([TimerTrigger("0 */15 * * * *", RunOnStartup = true)] MyInfo myTimer, FunctionContext context)
+    public async Task RunAsync([TimerTrigger("0 */15 * * * *")] MyInfo myTimer, FunctionContext context)
     {
         _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.UtcNow}");
 
@@ -90,18 +90,7 @@ public class TriggerGeneration
             _logger.LogInformation("Processing URN: {urn}", limsResult.Sample.LabelId);
             limsResult.Footer = footer;
             limsResult.LogoBase64 = Convert.ToBase64String(reportLogo.Bytes);
-            // TODO: remove this
-            limsResult.ReportAddress = new()
-            {
-                Name = "asd",
-                Country = "asd",
-                Email = "asd",
-                Line1 = "asd",
-                Line2 = "asd",
-                Phone = "asd",
-                Postcode = "asd",
-                Town = "asd"
-            };
+            
             var httpResponse = await _httpClient.PostAsJsonAsync(_reportGeneratorSettings.Endpoint, limsResult);
             if (!httpResponse.IsSuccessStatusCode)
             {
